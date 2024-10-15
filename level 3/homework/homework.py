@@ -45,7 +45,7 @@ penup()
 goto(-15,-100)
 right(220)
 pendown()
-shapesize(30)
+
 
 write("fasanauruli xinkali")
 
