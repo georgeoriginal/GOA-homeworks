@@ -8,5 +8,3 @@ num=20.5
 name="giorgi"
 surname="katsitadze"
 print(name + surname)
-x=15 + 5
-print(x)
