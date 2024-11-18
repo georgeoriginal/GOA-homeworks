@@ -1,121 +1,37 @@
-def chatbot():
-    print("გამარჯობა! მე ვარ  ჩატბოტი. თუ გსურთ საუბრის დასრულეა, დაწერეთ 'ნახვამდის'.")
-    
-    
-    is_hello = False
-    is_how_are_you = False
-    is_bye = False
-    is_your_name = False
-    is_your_age = False
-    is_best_mentor = False
-    is_weather = False
-    
-    
-    while True:
-        user_input = input("თქვენ: ")
-        
-        
-        if "გამარჯობა" in user_input or "ხო" in user_input:
-            is_hello = True
-            is_how_are_you = False
-            is_bye = False
-            is_your_name = False
-            is_your_age = False
-            is_best_mentor = False
-            is_weather = False
-            
-            print("ჩადბოტი: გამარჯობა! როგორ შემიძლია დაგეხმაროთ?")
-        
-        
-        elif "როგორ ხარ" in user_input or "როგორ ხარ?" in user_input:
-            is_how_are_you = True
-            is_hello = False
-            is_bye = False
-            is_your_name = False
-            is_your_age = False
-            is_best_mentor = False
-            is_weather = False
-            
-            print("ჩადბოტი: კარგად ვარ, მადლობა რომ მკითხეთ!")
-
-        elif "ვინ არის გოას საუკეთესო მენტორი" in user_input or "ვინ არის საუკეთესო მენტორი" in user_input:
-            is_hello = False
-            is_how_are_you = False
-            is_bye = False
-            is_your_name = False
-            is_your_age = False
-            is_best_mentor = True
-            is_weather = False
-            
-            print("ჩადბოტი: ეს რა შეკითხვაა რა თქმა უნდა გაბრიელ მოლოდინი დამცინი?")
-
-        elif "რა ამინდია დღეს" in user_input or "რა ამინდია?" in user_input:
-         is_hello = False
-         is_how_are_you = False
-         is_bye = False
-         is_your_name = False
-         is_your_age = False
-         is_best_mentor = False
-         is_weather = True
-         
-         print("ჩადბოტი: გაიხედე გარეთ ვერ ხედავ რა ამინდია?!")
-
-
-
-
-
-        
-
-        elif "რამდენი წლის ხარ" in user_input or "რა ასაკის ხარ" in user_input or "ასაკი?" in user_input:
-            is_hello = False
-            is_how_are_you = False
-            is_bye = False
-            is_how_are_you = False
-            is_your_age = True
-            is_best_mentor = False
-            is_weather = False
-            
-            print("ჩადბოტი: მე არ მაქვს ასაკი და არ ვბერდები რადგან ვარ ჩადი.")
-
-        elif "რა არის შენი სახელი" in user_input or "რა გქვია შენ"  in user_input or "რა გქვია" in user_input:
-            is_your_name = True
-            is_hello = False
-            is_bye = False
-            is_how_are_you = False
-            is_your_age = False
-            is_best_mentor = False
-            is_weather = False
-            print("ჩადბოტი: ჩემი სახელია ჩატბოტი")
-
-        elif  "გამოსვლა" in user_input or "თავი გამანებე" in user_input:
-            is_bye = True
-            is_hello = False
-            is_how_are_you = False
-            is_your_name = False
-            is_your_age = False
-            is_best_mentor = False
-            is_weather = False
-            
-            print("ჩადბოტი: ნახვამდის! კარგ დღეს გისურვებთ!")
-            break
-            
-
-        
-                 
-        
-
-
-        
-        
-
-    
-            
-        
-        
-        elif not is_hello and not is_how_are_you and not is_bye and not is_your_name and not is_best_mentor and not is_weather and not is_your_age and not is_weather and not is_your_age:
-            print("ჩადბოტი: ბოდიში, ვერ გავიგე თქვენი შეკითხვა. შეგიძლიათ გაახმოვანოთ სხვა სიტყვებით?")
-        
-        
-
-if __name__ == "__main__":
-    chatbot()
+user_name = input("Hello! my name is sigmabot, Whats your name?: ")
+print("Hello", user_name)
+question_options = input("lets talk!(options: 1.how are you? 2.what is python? 3.what movie should i watch?): ")
+if question_options== "how are you?":
+    user_mood = input("I am good, what about you?(option: 1.Good 2.Bad)")
+    if user_mood == "Good":
+        print("Its very good")
+    elif user_mood == "Bad":
+        print("Oh, am sorry to hear that!")
+    else:
+        print("I dont understand you. read the options carefully")
+elif question_options == "what is python?":
+    python_meanng = input("Python is programming language, wanna hear more about that?(Options: 1.Yes 2.No)")
+    if  python_meanng == "Yes":
+        print("Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.")
+    elif python_meanng == "No":
+        print("Alright, looser")
+    else:
+        print("I dont understand you. read the options carefully")
+elif question_options == "what movie should i watch?":
+    movie_genre = input("What genre are you interested in? ?(options: 1.Romance 2.Happyending 3.Horror 4.Action 5.Drama 6.Comedy): ")
+    if movie_genre== "Romance":
+        print("The Notebook")
+    elif movie_genre== "Happyending":
+        print("Good Will Hunting")
+    elif movie_genre == "Horror":
+        print("The Exorcist")
+    elif movie_genre== "Action" :
+        print("Venom.")
+    elif movie_genre == "Drama" :
+        print("Call Me by Your Name ")
+    elif movie_genre== "Comedy" :
+        print("Shua qalaqi")
+    else:
+        print("I dont understand! read the options carefully")
+else:
+    print("I dont understand. read option carefulli")
